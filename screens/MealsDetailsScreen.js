@@ -3,8 +3,14 @@ import { StyleSheet, Text, View } from "react-native";
 
 const MealsDetailsScreen = (props) => {
   return (
-    <View>
+    <View style={styles.screen}>
       <Text>Meals Details Screen</Text>
+      <Button
+        title={"Go Back to Categories"}
+        onPress={() => {
+          props.navigation.popToTop();
+        }}
+      />
     </View>
   );
 };
